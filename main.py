@@ -8,7 +8,7 @@ url = str(input("Enter a URL to spam: "))
 numOfThreads = int(input("Enter a number of threads to use: "))
 print(f"Spamming: {url} with {numOfThreads} threads.")
 
-if len(numOfThreads) < 1:
+if numOfThreads < 1:
     numOfThreads = 5
 
 def getRequest():
